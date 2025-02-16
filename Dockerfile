@@ -18,8 +18,8 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copy application files
 COPY . .
 
-# Expose port 5000
+# Expose the dynamic port Render assigns
 EXPOSE 5000
 
-# Command to run the application
-CMD ["python", "app.py"]
+# Use Gunicorn to serve the app
+CMD ["gunicorn", "-b", "0.0.0.0:5000", "app:app"]
