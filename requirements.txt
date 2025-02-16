@@ -1,5 +1,6 @@
-langchain
-langchain-community
-langchain-groq
 flask
-pyttx3
+flask-cors
+langchain
+langchain-groq
+pyttsx3
+gunicorn
